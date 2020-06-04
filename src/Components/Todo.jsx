@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Todo({handleChange, handleSubmit, input}) {
+export default function Todo({handleInputChange, handleSubmit, input}) {
 
     return (
         <div className='todo-list'>
@@ -9,7 +9,7 @@ export default function Todo({handleChange, handleSubmit, input}) {
                 className='taskInput'
                 placeholder='New Task'
                 value={input}
-                onChange={handleChange}
+                onChange={handleInputChange}
                 >
                 </input>
                 <button className='addTaskBtn' type='submit' >Add Task</button>

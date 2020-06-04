@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
 .addTaskForm {
@@ -34,7 +35,7 @@
   height: 25px;
   border-radius: 5px;
   border: none;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   font-size: 1rem;
   font-family: 'Quantico', sans-serif;
@@ -47,6 +48,7 @@
 .addTaskBtn {
   height: 45px;
   width: 150px;
+  margin: 10px;
   border-radius: 5px;
   border: none;
   background-color: #61dafb;
@@ -56,4 +58,43 @@
 
 .addTaskBtn:hover {
   background-color: #fb618f;
+}
+
+.task {
+  width: 800px;
+  padding: 0 10px;
+  margin: 10px auto 0 auto;
+  background-color: lightgrey;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task:hover {
+  background-color: #fb618f;
+}
+
+.delete-btn {
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  font-family: 'Quantico', sans-serif;
+  font-size: 1rem;
+}
+
+.delete-btn:hover {
+  background-color: lightgrey;
+}
+
+.task-text {
+  display: flex;
+}
+
+.task-completed {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }

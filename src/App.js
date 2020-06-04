@@ -7,24 +7,32 @@ function App() {
   const [input, setInput] = useState('');
   const [tasks, setTasks] = useState([]);
 
-  const handleChange = (event) => {
+  const handleInputChange = (event) => {
       setInput(event.target.value)
   }
 
   const handleSubmit = (event) => {
       event.preventDefault();
-      setTasks(tasks.concat({input}))
-      console.log({tasks})
-      setInput('');
+      if (input !== '') {
+        setTasks(tasks.concat({input}))
+        setInput('');
+      }
   }
+
+  const handleDelete = (event) => {
+    event.preventDefault();
+    setTasks(tasks.splice(event.target, 1))
+  }
+
+  const todoItems = tasks.map(task => <Tasks input={task.input} key={task.input + tasks.length} handleDelete={handleDelete} />)
 
   return (
     <div className="App">
       <header className="todoHeader">
-        To Do List
+        To Do List:
       </header>
-      <Todo handleChange={handleChange} handleSubmit={handleSubmit} input={input} />
-      <Tasks tasks={tasks} />
+      <Todo handleInputChange={handleInputChange} handleSubmit={handleSubmit} input={input} />
+      {todoItems}
     </div>
   );
 }
