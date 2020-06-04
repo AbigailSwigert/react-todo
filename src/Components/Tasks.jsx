@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default function Tasks({input, handleDelete}) {
+export default function Tasks({input, handleDelete, id}) {
 
     return (
         <div className='task'>
@@ -9,7 +9,7 @@ export default function Tasks({input, handleDelete}) {
                 <input type='checkbox' className='task-completed' />
                 {input}
             </p>
-            <button className='delete-btn' onClick={handleDelete} >Delete</button>
+            <button className='delete-btn' onClick={() => handleDelete(id)} >Delete</button>
         </div>
     )
 }
