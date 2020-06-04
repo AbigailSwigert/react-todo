@@ -34,6 +34,8 @@ function App() {
     }, 1000)
   }
 
+  const handleDeleteAll = () => setTasks([]);
+
   const todoItems = tasks.map((task, index) => <Tasks input={task.input} id={task.id} key={task.id} handleDelete={handleDelete} />)
 
   return (
@@ -43,6 +45,7 @@ function App() {
       </header>
       <Todo handleInputChange={handleInputChange} handleSubmit={handleSubmit} input={input} />
       {todoItems}
+      <button className='delete-all' onClick={handleDeleteAll} >Delete all tasks</button>
     </div>
   );
 }

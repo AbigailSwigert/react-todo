@@ -108,3 +108,18 @@
   animation-name: fade-out;
   animation-duration: 1s;
 }
+
+.delete-all {
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  font-family: 'Quantico', sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.delete-all:hover {
+  background-color: #fb618f;
+}
