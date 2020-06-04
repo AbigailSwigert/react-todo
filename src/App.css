@@ -98,3 +98,13 @@
   height: 20px;
   margin-right: 10px;
 }
+
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 1s;
+}

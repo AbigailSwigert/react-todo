@@ -17,6 +17,7 @@ function App() {
       setId(event.target.value + keyCount);
   }
 
+
   const handleSubmit = (event) => {
       event.preventDefault();
       if (input !== '') {
@@ -28,7 +29,9 @@ function App() {
   }
 
   const handleDelete = (taskId) => {
-    setTasks(tasks.filter((task) => task.id !== taskId));
+    setTimeout( function() {
+      setTasks(tasks.filter((task) => task.id !== taskId));
+    }, 1000)
   }
 
   const todoItems = tasks.map((task, index) => <Tasks input={task.input} id={task.id} key={task.id} handleDelete={handleDelete} />)
