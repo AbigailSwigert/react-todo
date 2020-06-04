@@ -116,10 +116,27 @@
 }
 
 .task-completed {
+  appearance: none;
+  background-color: #61dafb;
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  border-radius: 2px;
 }
+
+.task-completed:checked{
+  appearance: none;
+  background-color: #61dafb;
+}
+
+.task-completed:checked:after {
+	content: '\2714';
+  font-size: 14px;
+  position: relative;
+  left: 5px;
+	color: rgb(255, 255, 255);
+}
+
 
 @keyframes fade-out {
   from {opacity: 1;}
