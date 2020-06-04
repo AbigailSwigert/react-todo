@@ -3,6 +3,10 @@ import './App.css';
 import Todo from './Components/Todo';
 import Tasks from './Components/Tasks';
 
+
+
+let keyCount = 0;
+
 function App() {
   const [input, setInput] = useState('');
   const [tasks, setTasks] = useState([]);
@@ -10,7 +14,7 @@ function App() {
 
   const handleInputChange = (event) => {
       setInput(event.target.value);
-      setId(event.target.value);
+      setId(event.target.value + keyCount);
   }
 
   const handleSubmit = (event) => {
@@ -19,14 +23,15 @@ function App() {
         setTasks(tasks.concat({input, id}));
         setInput('');
         setId('');
+        keyCount++;
       }
   }
 
   const handleDelete = (taskId) => {
-    setTasks(tasks.filter((task, index) => task.id + index !== taskId))
+    setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
-  const todoItems = tasks.map((task, index) => <Tasks input={task.input} id={task.id + index} key={task.id + index} handleDelete={handleDelete} />)
+  const todoItems = tasks.map((task, index) => <Tasks input={task.input} id={task.id} key={task.id} handleDelete={handleDelete} />)
 
   return (
     <div className="App">
