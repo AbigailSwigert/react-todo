@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Quantico', sans-serif;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.todoHeader {
+  background-color: #61dafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: #282c34;
+}
+
+.todo-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.addTaskForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskInput {
+  width: 300px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Quantico', sans-serif;
+}
+
+.taskInput:focus {
+  box-shadow: 0 0 5px 2px #fb618f;
+  outline: none;
+}
+
+.addTaskBtn {
+  height: 45px;
+  width: 150px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  font-family: 'Quantico', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.addTaskBtn:hover {
+  background-color: #fb618f;
+}
+
+.addTaskBtn:active {
+  -moz-box-shadow:    inset 0 0 10px #5e2032;
+  -webkit-box-shadow: inset 0 0 10px #5e2032;
+  box-shadow:         inset 0 0 10px #5e2032;
+}
+
+.task {
+  width: 800px;
+  padding: 0 10px;
+  margin: 10px auto 0 auto;
+  background-color: lightgrey;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: none;
+}
+
+.task:hover {
+  background-color: #fb618f;
+}
+
+.task:active {
+  -moz-box-shadow:    inset 0 0 10px #5e2032;
+  -webkit-box-shadow: inset 0 0 10px #5e2032;
+  box-shadow:         inset 0 0 10px #5e2032;
+}
+
+.delete-btn {
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  font-family: 'Quantico', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.delete-btn:hover {
+  background-color: lightgrey;
+}
+
+.delete-btn:active {
+  -moz-box-shadow:    inset 0 0 10px #313131;
+  -webkit-box-shadow: inset 0 0 10px #313131;
+  box-shadow:         inset 0 0 10px #313131;
+}
+
+.task-text {
+  display: flex;
+}
+
+.task-completed {
+  appearance: none;
+  background-color: #61dafb;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.task-completed:checked{
+  appearance: none;
+  background-color: #61dafb;
+}
+
+.task-completed:checked:after {
+	content: '\2714';
+  font-size: 14px;
+  position: relative;
+  left: 5px;
+	color: rgb(255, 255, 255);
+}
+
+
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 1s;
+}
+
+.delete-all {
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  font-family: 'Quantico', sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+  outline: none;
+}
+
+.delete-all:hover {
+  background-color: #fb618f;
+}
+
+.delete-all:active {
+  -moz-box-shadow:    inset 0 0 10px #5e2032;
+  -webkit-box-shadow: inset 0 0 10px #5e2032;
+  box-shadow:         inset 0 0 10px #5e2032;
+}
